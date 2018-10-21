@@ -1,4 +1,4 @@
-package com.mkyong.form.dao;
+/**package com.mkyong.form.dao;
 
 import java.util.List;
 
@@ -16,4 +16,4 @@ public interface UserDao {
 
 	void delete(Integer id);
 
-}
+}*/

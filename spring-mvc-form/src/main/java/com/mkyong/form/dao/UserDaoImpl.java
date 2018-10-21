@@ -1,4 +1,4 @@
-package com.mkyong.form.dao;
+/**package com.mkyong.form.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -47,10 +47,10 @@ public class UserDaoImpl implements UserDao {
 			// do nothing, return null
 		}
 
-		/*
-		 * User result = namedParameterJdbcTemplate.queryForObject( sql, params,
-		 * new BeanPropertyRowMapper<User>());
-		 */
+		
+		 // User result = namedParameterJdbcTemplate.queryForObject( sql, params,
+		 // new BeanPropertyRowMapper<User>());
+		 
 
 		return result;
 
@@ -161,3 +161,4 @@ public class UserDaoImpl implements UserDao {
 	}
 
 }
+**/

@@ -1,4 +1,4 @@
-package com.mkyong.form.validator;
+/**package com.mkyong.form.validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -65,4 +65,4 @@ public class UserFormValidator implements Validator {
 
 	}
 
-}
+}**/

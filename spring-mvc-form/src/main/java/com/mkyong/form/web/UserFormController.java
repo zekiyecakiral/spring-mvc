@@ -1,4 +1,4 @@
-/*package com.mkyong.form.web;
+/**package com.mkyong.form.web;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -126,4 +126,4 @@ public class UserFormController {
 
 	}
 	
-}*/
+}**/

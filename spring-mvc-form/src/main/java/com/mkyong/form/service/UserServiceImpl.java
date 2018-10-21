@@ -1,4 +1,4 @@
-package com.mkyong.form.service;
+/**package com.mkyong.form.service;
 
 import java.util.List;
 
@@ -44,4 +44,4 @@ public class UserServiceImpl implements UserService {
 		userDao.delete(id);
 	}
 
-}
+}**/

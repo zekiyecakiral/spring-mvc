@@ -1,4 +1,4 @@
-package com.mkyong.form.service;
+/**package com.mkyong.form.service;
 
 import java.util.List;
 
@@ -14,4 +14,4 @@ public interface UserService {
 	
 	void delete(int id);
 	
-}
+}**/

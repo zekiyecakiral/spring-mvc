@@ -1,4 +1,4 @@
-package com.mkyong.form.web;
+/**package com.mkyong.form.web;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,25 +34,19 @@ import com.mkyong.form.validator.UserFormValidator;
 //http://www.tikalk.com/redirectattributes-new-feature-spring-mvc-31/
 //https://en.wikipedia.org/wiki/Post/Redirect/Get
 //http://www.oschina.net/translate/spring-mvc-flash-attribute-example
-@Controller
+@Controller("/users")
 public class UserController {
 
 	private final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-	@Autowired
-	UserFormValidator userFormValidator;
-	
-	@InitBinder
-	protected void initBinder(WebDataBinder binder) {
-		binder.setValidator(userFormValidator);
-	}
 
 	private UserService userService;
-
 	@Autowired
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
+
+	
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(Model model) {
@@ -90,6 +84,7 @@ public class UserController {
 			}
 			
 			userService.saveOrUpdate(user);
+			logger.info("user kaydedildi.");
 			
 			// POST/REDIRECT/GET
 			return "redirect:/users/" + user.getId();
@@ -101,34 +96,31 @@ public class UserController {
 
 	}
 
+
 	// show add user form
 	@RequestMapping(value = "/users/add", method = RequestMethod.GET)
 	public String showAddUserForm(Model model) {
 
 		logger.debug("showAddUserForm()");
-
 		User user = new User();
-
 		// set default value
 		user.setName("mkyong123");
 		user.setEmail("test@gmail.com");
 		user.setAddress("abc 88");
-		//user.setPassword("123");
-		//user.setConfirmPassword("123");
 		user.setNewsletter(true);
 		user.setSex("M");
 		user.setFramework(new ArrayList<String>(Arrays.asList("Spring MVC", "GWT")));
 		user.setSkill(new ArrayList<String>(Arrays.asList("Spring", "Grails", "Groovy")));
 		user.setCountry("SG");
 		user.setNumber(2);
-
 		model.addAttribute("userForm", user);
-
 		populateDefaultModel(model);
-
 		return "users/userform";
 
 	}
+	
+	
+
 
 	// show update form
 	@RequestMapping(value = "/users/{id}/update", method = RequestMethod.GET)
@@ -176,6 +168,8 @@ public class UserController {
 		return "users/show";
 
 	}
+
+
 
 	private void populateDefaultModel(Model model) {
 
@@ -228,3 +222,4 @@ public class UserController {
 	}
 
 }
+**/

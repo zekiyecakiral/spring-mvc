@@ -1,4 +1,4 @@
-package com.mkyong.form.model;
+/**package com.mkyong.form.model;
 
 import java.util.List;
 
@@ -148,3 +148,4 @@ public class User {
 	}
 
 }
+**/

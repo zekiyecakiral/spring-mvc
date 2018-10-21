@@ -30,8 +30,10 @@ public class SpringDBConfig {
 	@Bean
 	public DataSource getDataSource() {
 		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
+		/**EmbeddedDatabase db = builder.setName("testdb").setType(EmbeddedDatabaseType.HSQL)
+				.addScript("db/sql/create-db.sql").addScript("db/sql/insert-data.sql").build();**/
 		EmbeddedDatabase db = builder.setName("testdb").setType(EmbeddedDatabaseType.HSQL)
-				.addScript("db/sql/create-db.sql").addScript("db/sql/insert-data.sql").build();
+				.addScript("db/sql/create-db.sql").build();
 		return db;
 	}
 
